@@ -38,12 +38,15 @@ class Model_Handler:
 
         x = self.preprocess_pil_images(pil_images)
         y = list(self.models[captcha_string].predict(x))
+        formatted_predictions = [f'{value * 100:.2f}%' for value in y]
 
-        if self.verbose : print(f"Predictions: {y}")
+        if self.verbose : print(f"Predictions: {formatted_predictions}")
 
         is_correct = [prediction > 0.5 for prediction in y]
 
-        if self.verbose : print(f"Correct Images: {is_correct}")
+        correct_int = [i for i, prediction in enumerate(y) if prediction > 0.5]
+
+        if self.verbose : print(f"Correct Images: {correct_int}")
 
         return is_correct
 

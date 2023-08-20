@@ -1,6 +1,3 @@
-from . import webdriver_handler as wh
-from . import model_handler as mh
-
 from PIL import Image
 from io import BytesIO
 import requests
@@ -9,6 +6,9 @@ from unidecode import unidecode
 
 from matplotlib import pyplot as plt
 import time
+
+import webdriver_handler as wh
+import model_handler as mh
 
 class Captcha_Solver:
     def __init__(self, verbose=True):
@@ -144,3 +144,5 @@ def normalize_captcha_string(captcha_str):
     captcha_str = captcha_str.replace("Please click on all images containing a ","")
     captcha_str = captcha_str.replace("Please click on all images containing ","")
     return captcha_str
+
+    

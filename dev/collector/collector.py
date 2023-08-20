@@ -81,10 +81,10 @@ def collect_data(db_handler, url="https://accounts.hcaptcha.com/demo", count=100
 
         captcha_str = normalize_captcha_string(captcha_str)
 
-        if captcha_str in limited_captcha_strings:
-            print(f"{captcha_str:<16}: Captcha string is limited, skipping")
-            time.sleep(1.0)
-            continue
+        # if captcha_str in limited_captcha_strings:
+        #     print(f"{captcha_str:<20}: Captcha string is limited, skipping")
+        #     time.sleep(1.0)
+        #     continue
 
         with requests.Session() as s:
             captcha_raw = [s.get(captcha_url).content for captcha_url in captcha_urls]

@@ -48,7 +48,7 @@ class Webdriver_Handler:
 
     def load_captcha(self):
         self.wd.get(self.url)
-        print("Loaded Website")
+        print("Loaded Website " + self.url)
 
         WebDriverWait(self.wd, self.timeout).until(EC.frame_to_be_available_and_switch_to_it((By.XPATH,"//iframe[contains(@src,'hcaptcha') and contains(@src,'checkbox')]")))
         WebDriverWait(self.wd, self.timeout).until(EC.element_to_be_clickable((By.XPATH, "/html/body"))).click()
