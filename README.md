@@ -6,7 +6,7 @@
 
 
 a lightweight Python library for solving hCaptcha challenges with selenium and neural networks
-> _**NOTE: this package is still in early development.  
+> _**NOTE: this package is no longer actively maintained and does not work properly.  
 > If you encounter any issues or unexpected behaviours, please report them!**_
 
 ## Installation
@@ -57,4 +57,4 @@ Forks and pull requests are very welcome. You can also create issues to discuss 
 
 To help collecting captchas, run `dev/main.ipynb` and submit the results. In this notebook you can also explore the data availability and train models.
 
-> _updated 15/08/2023_
+> _updated 13/06/2024_
